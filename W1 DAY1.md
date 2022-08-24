@@ -243,13 +243,86 @@ uint public getSizeofArray;
 ```
 
 
-##    
+## struct  
 ```bash
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0; 
+
+struct project {
+    uint hasd_id;
+    string add;
+}
+contract demo {
+
+    project public s1;
+
+    function deploy (uint a, string memory b) public 
+    {
+        s1.hasd_id=a;
+        s1.add=b;
+
+        
+    }
+}
+-----------------------------------------------------------------------------------------
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0; 
+
+struct project {
+    uint hasd_id;
+    string add;
+}
+contract demo {
+
+    project public s1;
+    project public s2;
+    project public s3;
+    function deploy (uint a, string memory b) public 
+    {
+        s1.hasd_id=a;
+        s1.add=b;
+
+        s2.hasd_id=a*2;
+        s2.add=b;
+
+        s3.hasd_id=a*3;
+        s3.add=b;
+       
+    }
+}
+------------------------------------------------------------------------------------------------------------
 ```
 
 
-## 
+## struct- mapping simple v1 
 ```bash
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0; 
+
+contract college {
+
+    struct student {
+        string name;
+        uint class;
+    }
+
+    mapping(uint=>student) public data; 
+
+    function getter(uint _rollno,string memory _name,uint _class) public 
+    {
+        data[_rollno]=student(_name,_class);
+        
+    }
+
+}
+
+
+
+
+    
 ```
 
 
